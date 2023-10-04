@@ -47,8 +47,7 @@ IMPORTANT: Entire response must be in the language with ISO code: ${options.lang
         }
       })
     } else {
-      const err =
-        "Unable to initialize the OpenAI API, both 'OPENAI_API_KEY' environment variable are not available"
+      const err = "Unable to initialize the OpenAI API, both 'OPENAI_API_KEY' environment variable are not available"
       throw new Error(err)
     }
   }
@@ -66,10 +65,7 @@ IMPORTANT: Entire response must be in the language with ISO code: ${options.lang
     }
   }
 
-  private readonly chat_ = async (
-    message: string,
-    ids: Ids
-  ): Promise<[string, Ids]> => {
+  private readonly chat_ = async (message: string, ids: Ids): Promise<[string, Ids]> => {
     // record timing
     const start = Date.now()
     if (!message) {
@@ -91,18 +87,12 @@ IMPORTANT: Entire response must be in the language with ISO code: ${options.lang
         })
       } catch (e: unknown) {
         if (e instanceof ChatGPTError) {
-          info(
-            `response: ${response}, failed to send message to openai: ${e}, backtrace: ${e.stack}`
-          )
+          info(`response: ${response}, failed to send message to openai: ${e}, backtrace: ${e.stack}`)
         }
       }
       const end = Date.now()
       info(`response: ${JSON.stringify(response)}`)
-      info(
-        `openai sendMessage (including retries) response time: ${
-          end - start
-        } ms`
-      )
+      info(`openai sendMessage (including retries) response time: ${end - start} ms`)
     } else {
       setFailed('The OpenAI API is not initialized')
     }

@@ -242,10 +242,7 @@ $comment
     this.summarizeReleaseNotes = summarizeReleaseNotes
   }
 
-  renderSummarizeFileDiff(
-    inputs: Inputs,
-    reviewSimpleChanges: boolean
-  ): string {
+  renderSummarizeFileDiff(inputs: Inputs, reviewSimpleChanges: boolean): string {
     let prompt = this.summarizeFileDiff
     if (reviewSimpleChanges === false) {
       prompt += this.triageFileDiff

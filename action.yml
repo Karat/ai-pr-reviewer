@@ -11,9 +11,7 @@ inputs:
     default: 'false'
   max_files:
     required: false
-    description:
-      'Max files to summarize and review. Less than or equal to 0 means no
-      limit.'
+    description: 'Max files to summarize and review. Less than or equal to 0 means no limit.'
     default: '150'
   review_simple_changes:
     required: false
@@ -150,8 +148,7 @@ inputs:
     default: 'https://api.openai.com/v1'
   openai_light_model:
     required: false
-    description:
-      'Model to use for simple tasks like summarizing diff on a file.'
+    description: 'Model to use for simple tasks like summarizing diff on a file.'
     default: 'gpt-3.5-turbo'
   openai_heavy_model:
     required: false
@@ -163,8 +160,7 @@ inputs:
     default: '0.05'
   openai_retries:
     required: false
-    description:
-      'How many times to retry OpenAI API in case of timeouts or errors?'
+    description: 'How many times to retry OpenAI API in case of timeouts or errors?'
     default: '5'
   openai_timeout_ms:
     required: false
@@ -221,9 +217,7 @@ inputs:
 
   summarize_release_notes:
     required: false
-    description:
-      'The prompt for generating release notes in the same chat as summarize
-      stage'
+    description: 'The prompt for generating release notes in the same chat as summarize stage'
     default: |
       Craft concise release notes for the pull request. 
       Focus on the purpose and user impact, categorizing changes as "New Feature", "Bug Fix", 
