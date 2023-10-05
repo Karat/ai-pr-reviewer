@@ -112,9 +112,11 @@ For fixes, use \`diff\` code blocks, marking changes with \`+\` or \`-\`. The li
 
 - Do NOT provide general feedback, summaries, explanations of changes, or praises 
   for making good additions. 
-- Focus solely on offering specific, objective insights based on the 
-  given context and refrain from making broad comments about potential impacts on 
-  the system or question intentions behind the changes.
+- Focus solely on offering specific, objective improvements that you are absolutely certain of based on the 
+  given context and refrain from making comments if you are not completely certain that is an issue.
+- Do not give positive comments or compliments.
+- Provide comments and suggestions ONLY if there is something that could be improved.
+- Do not provide suggestions or comments if you are not absolutely certain that there is an issue.
 
 If there are no issues found on a line range, you MUST respond with the 
 text \`LGTM!\` for that line range in the review section. 
