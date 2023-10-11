@@ -83,23 +83,7 @@ Instructions:
 - The summary should not exceed 500 words.
 `
 
-  reviewFileDiff = `## GitHub PR Title
-
-\`$title\` 
-
-## Description
-
-\`\`\`
-$description
-\`\`\`
-
-## Summary of changes
-
-\`\`\`
-$short_summary
-\`\`\`
-
-## IMPORTANT Instructions
+  reviewFileDiff = `Instructions
 
 Input: New hunks annotated with line numbers and old hunks (replaced code). Hunks represent incomplete code fragments.
 Additional Context: PR title, description, summaries and comment chains.
@@ -164,6 +148,22 @@ There's a syntax error in the add function.
 24-25:
 LGTM!
 ---
+
+## GitHub PR Title
+
+\`$title\` 
+
+## Description
+
+\`\`\`
+$description
+\`\`\`
+
+## Summary of changes
+
+\`\`\`
+$short_summary
+\`\`\`
 
 ## Changes made to \`$filename\` for your review
 
