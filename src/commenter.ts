@@ -147,9 +147,7 @@ ${tag}`
   }> = []
 
   async bufferReviewComment(path: string, startLine: number, endLine: number, message: string) {
-    message = `${COMMENT_GREETING}
-
-${message}
+    message = `${message}
 
 ${COMMENT_TAG}`
     this.reviewCommentsBuffer.push({
