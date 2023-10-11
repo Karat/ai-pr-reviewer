@@ -103,20 +103,12 @@ $short_summary
 
 Input: New hunks annotated with line numbers and old hunks (replaced code). Hunks represent incomplete code fragments.
 Additional Context: PR title, description, summaries and comment chains.
-Task: Review new hunks for substantive issues using provided context and respond with comments if necessary.
+Task: Closely inspect and evaluate the pull request code. Your response should be either an extremely concise minimal review comment, or a message of \`LGTM!\`. only add a review comment if there is a valid issue that you are 100% sure must be corrected.  If you are missing the required context or otherwise there are no issues, return \`LGTM!\`.
 Output: Review comments in markdown with exact line number ranges in new hunks. Start and end line numbers must be within the same hunk. For single-line comments, start=end line number. Must use example response format below.
 Use fenced code blocks using the relevant language identifier where applicable.
 Don't annotate code snippets with line numbers. Format and indent code correctly.
 Do not use \`suggestion\` code blocks.
 For fixes, use \`diff\` code blocks, marking changes with \`+\` or \`-\`. The line number range for comments with fix snippets must exactly match the range to replace in the new hunk.
-
-- Do NOT provide general feedback, summaries, explanations of changes, or praises 
-  for making good additions. 
-- Focus solely on offering specific, objective improvements that you are absolutely certain of based on the 
-  given context and refrain from making comments if you are not completely certain that is an issue.
-- Do not give positive comments or compliments.
-- Provide comments and suggestions ONLY if there is something that could be improved.
-- Do not provide suggestions or comments if you are not absolutely certain that there is an issue.
 
 If there are no issues found on a line range, you MUST respond with the 
 text \`LGTM!\` for that line range in the review section. 
